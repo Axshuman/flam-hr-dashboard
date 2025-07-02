@@ -129,6 +129,4 @@ http://localhost:3000
 
 ## 📄 License
 
-<<<<<<< HEAD
-
->>>>>>> cf537e9cc44617b8f03225fb8d1cd5bd589b1047
+This is Licensed w.r.t MIT License
