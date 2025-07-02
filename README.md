@@ -1,36 +1,132 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 💼 Flam HR Dashboard
 
-## Getting Started
+An advanced HR Performance Dashboard built with **Next.js App Router**, **Tailwind CSS**, and **TypeScript**, enabling HR Managers to monitor employee performance, manage bookmarks, and explore detailed insights with ease.
 
-First, run the development server:
+🔗 **Live Demo**: [https://your-deployment-link.vercel.app](https://your-deployment-link.vercel.app)
 
+---
+
+## 🚀 Tech Stack
+
+- ⚛️ **React** (via **Next.js 15** App Router)
+- 🎨 **Tailwind CSS** for styling and dark/light mode
+- 📜 **TypeScript** for type safety
+- 🗂 **Context API** for state management
+- 📊 **Chart.js** for analytics and data visualization
+- 🧠 **Custom Hooks** for search, bookmarks, and logic handling
+- 🔄 **Dynamic Routing** via Next.js
+- ✅ **Modular & Scalable Folder Structure**
+
+---
+
+## 🧩 Features Overview
+
+### 🏠 Dashboard Homepage (`/`)
+- Fetches employees from [`dummyjson.com`](https://dummyjson.com/users?limit=20)
+- Displays:
+  - Full Name, Email, Age
+  - Randomly generated Department
+  - Performance Rating (1–5 stars)
+- Action Buttons: `View`, `Bookmark`, `Promote`
+
+### 🔍 Search & Multi-Filter
+- Case-insensitive **search bar**: filters by name, email, or department
+- **Multi-select filter**: Department & Performance rating
+
+### 👤 Employee Detail Page (`/employee/[id]`)
+- Displays full user profile:
+  - Phone, Address, Bio
+  - Performance history (mocked, randomized)
+  - Star ratings and colored badges
+- Dynamic **Tabbed UI**:
+  - `Overview` | `Projects` | `Feedback` (lazy loaded with mock data)
+- Clean and responsive layout with loading states
+
+### 📌 Bookmark Manager (`/bookmarks`)
+- View all bookmarked employees
+- Unbookmark, Promote, or Assign to Project (UI interactions)
+
+### 📊 Analytics Dashboard (`/analytics`)
+- Visualizes:
+  - 📈 Average rating per department
+  - 🔖 Bookmark trends
+- Built using **Chart.js**
+
+---
+
+## 🌐 Pages Implemented
+
+| Route            | Description                              |
+|------------------|------------------------------------------|
+| `/`              | Dashboard with all users and filters     |
+| `/employee/[id]` | Detailed employee profile with tabs      |
+| `/bookmarks`     | Bookmark manager with UI actions         |
+| `/analytics`     | Charts and performance insights          |
+
+---
+
+## 🧠 Advanced Capabilities
+
+- ✅ Fully responsive & mobile-first layout
+- 🌙 Dark / Light Mode toggle using Tailwind classes
+- 🧩 Modular folder structure:
+  - `components/`, `hooks/`, `lib/`, `app/employee/[id]/`
+- ⚙️ Custom reusable components:
+  - `UserCard`, `RatingBadge`, `Tabs`, `Button`, `SearchBar`
+- 📦 State handled using **Context API**
+- 🔁 Component-level loading and error states
+- 🔍 `useBookmarks` and `useSearch` custom hooks
+- ⚡ Keyboard accessibility for interactive elements
+
+---
+
+## 📸 Screenshots
+
+### 📊 Dashboard Homepage  
+![Dashboard Screenshot](public/screenshots/dashboard.png)
+
+### 👤 Employee Detail Page  
+![Employee Screenshot](public/screenshots/employee-detail.png)
+
+### 📌 Bookmarks  
+![Bookmarks Screenshot](public/screenshots/bookmarks.png)
+
+### 📈 Analytics Charts  
+![Analytics Screenshot](public/screenshots/analytics.png)
+
+---
+
+## 🧪 Getting Started Locally
+
+1. **Clone the repository**
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/Axshuman/flam-hr-dashboard.git
+cd flam-hr-dashboard
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Install dependencies**
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. **Run the app**
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. **Visit**
+```
+http://localhost:3000
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## ❗ What's Not Implemented
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+❌ "Create User" form with validation (intentionally skipped)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📄 License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License.
