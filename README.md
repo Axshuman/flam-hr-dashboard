@@ -129,4 +129,6 @@ http://localhost:3000
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+<<<<<<< HEAD
+
+>>>>>>> cf537e9cc44617b8f03225fb8d1cd5bd589b1047
